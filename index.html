@@ -1,13 +1,18 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>reCAPTCHA demo: Simple page</title>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  </head>
-  <body>
-    <form action="aaa.html" method="POST">
-      <div class="g-recaptcha" data-sitekey="6LfLm2knAAAAAIZ5h9QBhXx9ntShM5FAtSPPMCBG"></div>
-      <br/>
-      <input type="submit" value="Submit">
-    </form>
-  </body>
+<head>
+  <title>reCAPTCHA v2 Example</title>
+  <!-- Google reCAPTCHA API -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+  <h1>reCAPTCHA v2 Example</h1>
+  <form id="myForm" action="submit_form.php" method="post">
+    <!-- 他のフォームフィールドを追加 -->
+    <input type="text" name="name" placeholder="名前" required>
+    <!-- reCAPTCHAのウィジェットを追加 -->
+    <div class="g-recaptcha" data-sitekey="6LfLm2knAAAAAIZ5h9QBhXx9ntShM5FAtSPPMCBG"></div>
+    <button type="submit" id="submitButton" disabled>送信</button>
+  </form>
+</body>
 </html>
