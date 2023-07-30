@@ -6,10 +6,8 @@
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
-  <h1>reCAPTCHA v2 Example</h1>
   <form id="myForm" action="submit_form.php" method="post">
     <!-- 他のフォームフィールドを追加 -->
-    <input type="text" name="name" placeholder="名前" required>
     <!-- reCAPTCHAのウィジェットを追加 -->
     <div class="g-recaptcha" data-sitekey="6LfLm2knAAAAAIZ5h9QBhXx9ntShM5FAtSPPMCBG" data-callback="recaptchaCallback"></div>
     <button type="submit" id="submitButton" disabled>送信</button>
