@@ -1,13 +1,16 @@
+<!-- HTML -->
 <!DOCTYPE html>
 <html>
 <head>
-  <title>reCAPTCHA v2 Example</title>
+  <title>reCAPTCHA v2 Redirect Example</title>
   <!-- Google reCAPTCHA API -->
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
+  <h1>reCAPTCHA v2 Redirect Example</h1>
   <form id="myForm" action="submit_form.php" method="post">
     <!-- 他のフォームフィールドを追加 -->
+    <input type="text" name="name" placeholder="名前" required>
     <!-- reCAPTCHAのウィジェットを追加 -->
     <div class="g-recaptcha" data-sitekey="6LfLm2knAAAAAIZ5h9QBhXx9ntShM5FAtSPPMCBG" data-callback="recaptchaCallback"></div>
     <button type="submit" id="submitButton" disabled>送信</button>
@@ -19,17 +22,6 @@
     function recaptchaCallback() {
       $('#submitButton').prop('disabled', false); // 送信ボタンを有効化
     }
-
-    // フォームが送信される前にreCAPTCHAの応答を検証
-    $('#myForm').submit(function(event) {
-      if (!grecaptcha.getResponse()) {
-        event.preventDefault(); // reCAPTCHAの応答がない場合はフォーム送信をキャンセル
-        alert("reCAPTCHAを通過してください。");
-      } else {
-        // サーバーサイドへの処理を行い、フォームを送信
-        // 例: $.post('submit_form.php', $('#myForm').serialize());
-      }
-    });
   </script>
 </body>
 </html>
