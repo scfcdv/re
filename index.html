@@ -14,12 +14,15 @@
   });
 </script>
     <!-- reCAPTCHAのウィジェットを追加 -->
-    <div class="g-recaptcha" data-sitekey="6LfLm2knAAAAAIZ5h9QBhXx9ntShM5FAtSPPMCBG" data-callback="recaptchaCallback"></div>
+    <div id="myDiv" class="g-recaptcha" data-sitekey="6LfLm2knAAAAAIZ5h9QBhXx9ntShM5FAtSPPMCBG" data-callback="recaptchaCallback"></div>
     <button type="submit" id="submitButton" onclick="k()" disabled>プレイ</button>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
   function k(){
-  window.open( 'https://www.sejuku.net/blog/' );
+  var div = document.getElementById("myDiv");
+        
+        // divを非表示にする
+        div.style.display = "none";
   }
     // reCAPTCHAの応答が検証された後に実行されるコールバック関数
     function recaptchaCallback() {
