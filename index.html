@@ -1,35 +1,25 @@
-<!DOCTYPE html>
-<html>
 <head>
-  <title>テトリス</title>
-  <link rel="icon" href="https://scfcdv.github.io/homeweb2/favicon.ico">
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<title>テトリス</title>
+<link rel="icon" href="https://scfcdv.github.io/homeweb2/favicon.ico">
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body oncontextmenu="return false;">
 <script>
-  // JavaScriptの無効化
-  // ただし、正確にはこれだけでは対策にならない可能性があります
-  document.addEventListener('contextmenu', function (event) {
-    event.preventDefault();
-  });
+document.addEventListener('contextmenu', function (event) {
+event.preventDefault();});
 </script>
-    <!-- reCAPTCHAのウィジェットを追加 -->
-    <div id="myDiv" class="g-recaptcha" data-sitekey="6LfLm2knAAAAAIZ5h9QBhXx9ntShM5FAtSPPMCBG" data-callback="recaptchaCallback"></div>
-    <button type="submit" id="submitButton" onclick="k()" disabled>プレイ</button>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-  function k(){
-  as();
-  var div = document.getElementById("myDiv");
-  div.style.display = "none";
-  }
-  function as(){
-  var button = document.getElementById("submitButton");
-  button.style.display = "none";
-  }
-    // reCAPTCHAの応答が検証された後に実行されるコールバック関数
-    function recaptchaCallback() {
-      $('#submitButton').prop('disabled', false); // 送信ボタンを有効化
-    }
-  </script>
+<div id="myDiv" class="g-recaptcha" data-sitekey="6LfLm2knAAAAAIZ5h9QBhXx9ntShM5FAtSPPMCBG" data-callback="recaptchaCallback"></div>
+<button type="submit" id="submitButton" onclick="k()" disabled>プレイ</button>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+function k(){
+as();
+var div = document.getElementById("myDiv");
+div.style.display = "none";}
+function as(){
+var button = document.getElementById("submitButton");
+button.style.display = "none";}
+function recaptchaCallback() {
+$('#submitButton').prop('disabled', false);}
+</script>
 </body>
