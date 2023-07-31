@@ -13,13 +13,11 @@
     event.preventDefault();
   });
 </script>
-  <form id="myForm" action="aaa.html" method="post">
     <!-- 他のフォームフィールドを追加 -->
-    <input type="text" name="name" placeholder="名前" required>
+    <input type="text" name="name" placeholder="名前">
     <!-- reCAPTCHAのウィジェットを追加 -->
     <div class="g-recaptcha" data-sitekey="6LfLm2knAAAAAIZ5h9QBhXx9ntShM5FAtSPPMCBG" data-callback="recaptchaCallback"></div>
     <button type="submit" id="submitButton" disabled>プレイ</button>
-  </form>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     // reCAPTCHAの応答が検証された後に実行されるコールバック関数
