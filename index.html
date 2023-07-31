@@ -19,9 +19,12 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
   function k(){
+  as();
   var div = document.getElementById("myDiv");
   div.style.display = "none";
-  var div2 = document.getElementById("submitButton");
+  }
+  function as(){
+  var button = document.getElementById("submitButton");
   button.style.display = "none";
   }
     // reCAPTCHAの応答が検証された後に実行されるコールバック関数
