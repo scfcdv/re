@@ -17,9 +17,12 @@
     <input type="text" name="name" placeholder="名前">
     <!-- reCAPTCHAのウィジェットを追加 -->
     <div class="g-recaptcha" data-sitekey="6LfLm2knAAAAAIZ5h9QBhXx9ntShM5FAtSPPMCBG" data-callback="recaptchaCallback"></div>
-    <button type="submit" id="submitButton" disabled>プレイ</button>
+    <button type="submit" id="submitButton" onclick="k()" disabled>プレイ</button>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
+  function k(){
+  window.open( 'https://www.sejuku.net/blog/' );
+  }
     // reCAPTCHAの応答が検証された後に実行されるコールバック関数
     function recaptchaCallback() {
       $('#submitButton').prop('disabled', false); // 送信ボタンを有効化
