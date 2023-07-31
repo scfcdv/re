@@ -1,31 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>テトリス</title>
-  <link rel="icon" href="https://scfcdv.github.io/homeweb2/favicon.ico">
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-</head>
-<body oncontextmenu="return false;">
-<script>
-  // JavaScriptの無効化
-  // ただし、正確にはこれだけでは対策にならない可能性があります
-  document.addEventListener('contextmenu', function (event) {
-    event.preventDefault();
-  });
-</script>
-  <form id="myForm" action="aaa.html" method="post">
-    <!-- 他のフォームフィールドを追加 -->
-    <input type="text" name="name" placeholder="名前" required>
-    <!-- reCAPTCHAのウィジェットを追加 -->
-    <div class="g-recaptcha" data-sitekey="6LfLm2knAAAAAIZ5h9QBhXx9ntShM5FAtSPPMCBG" data-callback="recaptchaCallback"></div>
-    <button type="submit" id="submitButton" disabled>プレイ</button>
-  </form>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-    // reCAPTCHAの応答が検証された後に実行されるコールバック関数
-    function recaptchaCallback() {
-      $('#submitButton').prop('disabled', false); // 送信ボタンを有効化
-    }
-  </script>
-</body>
+
+
 </html>
+<head>
+<title>テトリス</title>
+<link rel="icon" href="https://scfcdv.github.io/homeweb2/favicon.ico">
+</head>
+<form id="myForm" action="/process_form" method="post">
+  <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+  <button type="submit" id="submitButton" disabled>Submit</button>
+</form>
+<script>
+function enableSubmitButton() {
+  document.getElementById("submitButton").disabled = false;
+}
+document.getElementById("myForm").addEventListener("submit", function(event) {
+  // reCAPTCHAが通過していない場合、フォームの送信をキャンセル
+  if (grecaptcha.getResponse() === "") {
+    event.preventDefault();
+  }
+});
+</script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
