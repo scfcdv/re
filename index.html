@@ -5,19 +5,12 @@
 <title>テトリス</title>
 <link rel="icon" href="https://scfcdv.github.io/homeweb2/favicon.ico">
 </head>
-<form id="myForm" action="/process_form" method="post">
-  <div class="g-recaptcha" data-sitekey="6LfLm2knAAAAAIZ5h9QBhXx9ntShM5FAtSPPMCBG"></div>
-  <button type="submit" id="submitButton" disabled>プレイ</button>
-</form>
+<div class="g-recaptcha" data-sitekey="6LfLm2knAAAAAIZ5h9QBhXx9ntShM5FAtSPPMCBG"></div>
 <script>
 function enableSubmitButton() {
-  document.getElementById("submitButton").disabled = false;
+  window.open(
+        "https://programmercollege.jp/",
+    );
 }
-document.getElementById("myForm").addEventListener("submit", function(event) {
-  // reCAPTCHAが通過していない場合、フォームの送信をキャンセル
-  if (grecaptcha.getResponse() === "") {
-    event.preventDefault();
-  }
-});
 </script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
