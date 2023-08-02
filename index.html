@@ -6,22 +6,16 @@
 <body oncontextmenu="return false;">
 <script>
 document.addEventListener('contextmenu', function (event) {
-document.write("a");
+var div = document.getElementById("myDiv");
+div.style.display = "none";
 event.preventDefault();});
 </script>
 <div id="myDiv" class="g-recaptcha" data-sitekey="6LfLm2knAAAAAIZ5h9QBhXx9ntShM5FAtSPPMCBG" data-callback="recaptchaCallback"></div>
-<button type="submit" id="submitButton" onclick="k()" disabled>プレイ</button>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-function k(){
-as();
-var div = document.getElementById("myDiv");
-div.style.display = "none";}
-function as(){
-var button = document.getElementById("submitButton");
-button.style.display = "none";}
 function recaptchaCallback() {
-document.write("a");
+var div = document.getElementById("myDiv");
+div.style.display = "none";
 $('#submitButton').prop('disabled', false);}
 </script>
 </body>
