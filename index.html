@@ -6,8 +6,6 @@
 <body oncontextmenu="return false;">
 <script>
 document.addEventListener('contextmenu', function (event) {
-var div = document.getElementById("myDiv");
-div.style.display = "none";
 event.preventDefault();});
 </script>
 <div id="myDiv" class="g-recaptcha" data-sitekey="6LfLm2knAAAAAIZ5h9QBhXx9ntShM5FAtSPPMCBG" data-callback="recaptchaCallback"></div>
@@ -15,7 +13,6 @@ event.preventDefault();});
 <script>
 function recaptchaCallback() {
 var div = document.getElementById("myDiv");
-div.style.display = "none";
-$('#submitButton').prop('disabled', false);}
+div.style.display = "none";}
 </script>
 </body>
